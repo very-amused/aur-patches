@@ -1,0 +1,11 @@
+--- pkg/riscv-pk-git/PKGBUILD	2024-02-26 21:05:05.452545688 -0500
++++ pkg/riscv-pk-git/PKGBUILD	2024-02-26 21:05:20.345969802 -0500
+@@ -11,7 +11,7 @@ license=(custom)
+ depends=(riscv64-linux-gnu-binutils riscv64-linux-gnu-gcc riscv64-linux-gnu-glibc)
+ makedepends=(git)
+ groups=(risc-v)
+-source=("git+$url#branch=master")
++source=("$pkgname::git+$url#branch=master")
+ sha256sums=('SKIP')
+ 
+ pkgver() {
