@@ -33,7 +33,7 @@ if [ ! -d "patches/$1" ]; then
 		cp -r "$pkg_outdir" "$pkg_outdir-original"
 		exit 0
 	else
-		echo "no patches exist for $1, exiting" &>2
+		echo "no patches exist for $1, exiting" >&2
 		exit 1
 	fi
 fi
