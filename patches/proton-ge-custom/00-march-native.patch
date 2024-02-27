@@ -1,0 +1,13 @@
+--- pkg/proton-ge-custom/PKGBUILD	2024-02-26 20:34:22.074118354 -0500
++++ pkg/proton-ge-custom/PKGBUILD	2024-02-26 20:35:34.507885670 -0500
+@@ -184,8 +184,8 @@ build() {
+     local -a split=($CFLAGS)
+     local -A flags
+     for opt in "${split[@]}"; do flags["${opt%%=*}"]="${opt##*=}"; done
+-    local march="${flags["-march"]:-nocona}"
+-    local mtune="${flags["-mtune"]:-core-avx2}"
++    local march="native"
++    local mtune="knm"
+ 
+     CFLAGS="-O2 -march=$march -mtune=$mtune -pipe -fno-semantic-interposition"
+     CXXFLAGS="-O2 -march=$march -mtune=$mtune -pipe -fno-semantic-interposition"
